@@ -1,0 +1,56 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score
+
+# Sample dataset
+data = {
+    "message": [
+        "Win a free iPhone now",
+        "Congratulations you won a prize",
+        "Meeting at 10 AM tomorrow",
+        "Please submit the report",
+        "Get free coupons now",
+        "Let's have lunch today"
+    ],
+    "label": ["spam", "spam", "ham", "ham", "spam", "ham"]
+}
+
+# Create dataframe
+df = pd.DataFrame(data)
+
+# Convert labels to numbers
+df['label_num'] = df.label.map({'ham':0, 'spam':1})
+
+# Split data into training and testing
+X_train, X_test, y_train, y_test = train_test_split(
+    df['message'], df['label_num'], test_size=0.2
+)
+
+# Convert text messages into numerical features
+vectorizer = CountVectorizer()
+X_train_count = vectorizer.fit_transform(X_train)
+X_test_count = vectorizer.transform(X_test)
+
+# Train the model
+model = MultinomialNB()
+model.fit(X_train_count, y_train)
+
+# Predict test data
+predictions = model.predict(X_test_count)
+
+# Check accuracy
+print("Accuracy:", accuracy_score(y_test, predictions))
+
+# Test with new message
+new_message = ["You have won a free lottery ticket"]
+new_message_count = vectorizer.transform(new_message)
+
+prediction = model.predict(new_message_count)
+
+if prediction[0] == 1:
+    print("Spam Message")
+else:
+    print("Not Spam")
+

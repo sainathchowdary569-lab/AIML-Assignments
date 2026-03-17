@@ -1,0 +1,20 @@
+'''
+Netflix uses a system that recommends a movie or a show that a user is most likely to like. One simple form that a recommendation system may take is the use of a K-Nearest Neighbor algorithm. The KNN algorithm works by finding users that are most similar to each other based on user ratings or preferences. The assumption behind this algorithm is that users that have similar tastes in movies will have a high probability of enjoying a movie that a similar user likes.
+
+For a Netflix-like system, it is normally assumed that the input data will be a user-movie rating matrix. In this case, each user will be represented by a row in a matrix, and each movie will be represented by a column in a matrix. The entries in this matrix will be the ratings that users have given to different movies. When a user watches some movies, the system will compare this user’s ratings with other users in a dataset. The system will then use a KNN algorithm to calculate the similarity between users or between movies.
+
+
+| User   | Movie A | Movie B | Movie C | Movie D |
+| ------ | ------- | ------- | ------- | ------- |
+| User 1 | 5       | 4       | 0       | 0       |
+| User 2 | 4       | 5       | 1       | 0       |
+| User 3 | 0       | 1       | 5       | 4       |
+
+
+In this case, 0 represents that the user has not rated the movie. The system aims to find out which users have similar tastes to each other. To do this, a method such as cosine similarity can be applied. Cosine similarity calculates how similar two rating patterns are.
+
+Firstly, we compare User 1 and User 2. They have similar ratings for Movie A and Movie B. They have given high ratings to these two movies. Hence, their similarity score is high. However, User 1 and User 3 have very dissimilar ratings. User 1 likes Movie A and Movie B, while User 3 likes Movie C and Movie D.
+
+If we choose K = 1, then we select the most similar user to User 1, which is User 2. User 2 has rated Movie C; hence, we can recommend Movie C to User 1 since User 2 has a similar taste to User 1. In a similar way, if a user likes a particular movie, we can recommend other movies that are liked by users having similar preferences.
+
+'''
