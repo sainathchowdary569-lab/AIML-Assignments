@@ -1,0 +1,22 @@
+import pandas as pd
+
+df = pd.read_csv(r"C:\Users\saina\Downloads\data.csv")
+
+print("--- Initial Data Snapshot ---")
+print(df.info())
+
+df['Age'] = df['Age'].fillna(df['Age'].median())
+df['city'] = df['city'].fillna('Unknown')
+
+initial_count = len(df)
+df = df.drop_duplicates()
+print(f"\nRemoved {initial_count - len(df)} duplicate rows.")
+
+df['city'] = df['city'].str.strip().str.lower()
+
+if 'signup_date' in df.columns:
+   df['signup_date'] = pd.to_datetime(df['signup_date'])
+
+df.to_csv('cleaned_data.csv', index=False)
+print("\n--- Cleaning Complete: 'cleaned_data.csv' saved ---")
+print(df.head())

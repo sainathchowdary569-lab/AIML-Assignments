@@ -1,0 +1,35 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv(r"C:\Users\saina\Downloads\data.csv")
+
+print(df.head())
+
+
+df['Category'].value_counts().plot(kind='bar')
+plt.title("Bar Chart of Category Distribution")
+plt.xlabel("Category")
+plt.ylabel("Count")
+plt.show()
+
+
+df['Category'].value_counts().plot(kind='pie', autopct='%1.1f%%')
+plt.title("Pie Chart of Category Distribution")
+plt.ylabel("")
+plt.show()
+
+df['Value'].plot(kind='hist', bins=10)
+plt.title("Histogram of Value Distribution")
+plt.xlabel("Value")
+plt.ylabel("Frequency")
+plt.show()
+
+'''
+The dataset analysis shows interesting patterns in the data. The bar chart reveals the distribution of different categories, helping identify which category appears most frequently. This indicates where the majority of observations belong.
+
+The pie chart visually represents the proportion of each category in the dataset. It clearly shows how the total data is divided among different groups, making it easy to compare their relative sizes.
+
+The histogram displays the distribution of numerical values. Most values appear within a specific range, suggesting that the data is concentrated around certain levels while fewer observations appear at the extremes.
+
+Overall, the visualizations help understand the structure of the dataset and highlight trends such as dominant categories, proportional representation, and the spread of numerical values.
+'''
