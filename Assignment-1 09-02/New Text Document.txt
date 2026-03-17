@@ -1,0 +1,20 @@
+1.Streaming Recommendations
+How ML works: These use Collaborative Filtering to compare your habits with millions of other users. If people who like the same niche indie bands as you also love a specific new artist, the algorithm predicts you will too.
+​2. Email Spam Filters
+​How ML works: Algorithms like Naïve Bayes or Support Vector Machines analyze keywords, metadata, and sender reputations. They learn to distinguish "ham" (real mail) from "spam" by spotting patterns common in millions of previously flagged junk emails.
+​3. Navigation and ETA (Google Maps/Waze)
+​How ML works: It uses Regression models and historical data to predict travel times. It combines real-time "crowdsourced" speed data from other drivers with historical patterns (like "traffic always peaks here at 5 PM on Tuesdays") to calculate the fastest route.
+​4. Facial Recognition
+​How ML works: Deep Learning (specifically Convolutional Neural Networks) breaks your face into a grid of numerical features. It measures distances between landmarks—like the width of your nose or the curve of your jaw—to create a unique "faceprint" for verification.5. Predictive Text and Autocorrect
+​How ML works: These rely on Natural Language Processing (NLP) and Recurrent Neural Networks (RNNs). The model calculates the probability of the "next word" based on the sequence of words you’ve already typed and your personal slang.
+​6. Voice Assistants
+​How ML works: They use Automatic Speech Recognition (ASR) to convert sound waves into text and Natural Language Understanding (NLU) to figure out intent. It’s essentially a giant decision tree that determines if "Set an alarm" means opening a clock app or playing a song.
+​7. Online Shopping Suggestions
+​How ML works: This uses Association Rule Learning (the "People who bought this also bought..." logic). The system analyzes billions of transactions to find hidden relationships between products that humans might not notice.
+​8. Social Media Feeds
+​How ML works: These use Reinforcement Learning. Every time you linger on a video or hit "like," you are providing a "reward" signal to the algorithm, which then prioritizes similar content to maximize your time spent on the app.
+​9. Banking Fraud Detection
+​How ML works: Banks use Anomaly Detection algorithms. By establishing a "baseline" of your normal spending (e.g., $20 at a local grocery store), the system can instantly flag a $2,000 purchase made in a different country as a statistical outlier.
+​10. Language Translation
+​How ML works: It uses Neural Machine Translation (NMT). Instead of translating word-for-word, it processes entire sentences at once to capture context and tone, using a massive database of multilingual documents to find the most accurate equivalent.
+
