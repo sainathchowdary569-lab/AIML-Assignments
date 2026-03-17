@@ -1,0 +1,43 @@
+def student_data_manager():
+   students = {
+       "Alice": {"marks": 85},
+       "Bob": {"marks": 72},
+       "Charlie": {"marks": 92},
+       "David": {"marks": 68},
+       "Eve": {"marks": 78}
+   }
+   total_marks = 0
+   topper_name = ""
+   highest_marks = -1
+   print("--- Student Records ---")
+   for name, data in students.items():
+       marks = data["marks"]
+       total_marks += marks
+
+       # Determine Grade
+       if marks >= 90:
+           grade = 'A'
+       elif marks >= 80:
+           grade = 'B'
+       elif marks >= 70:
+           grade = 'C'
+       elif marks >= 60:
+           grade = 'D'
+       else:
+           grade = 'F'
+
+       students[name]["grade"] = grade
+
+       if marks > highest_marks:
+           highest_marks = marks
+           topper_name = name
+
+       print(f"Student: {name} | Marks: {marks} | Grade: {grade}")
+
+   class_average = total_marks / len(students)
+
+   print("\n--- Class Summary ---")
+   print(f"Class Average: {class_average:.2f}")
+   print(f"Class Topper: {topper_name} with {highest_marks} marks.")
+
+student_data_manager()

@@ -1,0 +1,23 @@
+def fizzbuzz_logic(start, end):
+   fizz_count = 0
+   buzz_count = 0
+   fizzbuzz_count = 0
+
+   for i in range(start, end + 1):
+       if i % 3 == 0 and i % 5 == 0:
+           print("FizzBuzz")
+           fizzbuzz_count += 1
+       elif i % 3 == 0:
+           print("Fizz")
+           fizz_count += 1
+       elif i % 5 == 0:
+           print("Buzz")
+           buzz_count += 1
+       else:
+           print(i)
+   print("\n--- Summary ---")
+   print(f"Fizz Count: {fizz_count}")
+   print(f"Buzz Count: {buzz_count}")
+   print(f"FizzBuzz Count: {fizzbuzz_count}")
+
+fizzbuzz_logic(1, 50)

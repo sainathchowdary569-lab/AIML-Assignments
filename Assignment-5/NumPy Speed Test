@@ -1,0 +1,20 @@
+import numpy as np
+import time
+
+size = 1_000_000
+p_list = list(range(size))
+n_array = np.arange(size)
+
+start_time = time.time()
+list_result = [x**2 for x in p_list]
+list_duration = time.time() - start_time
+
+start_time = time.time()
+array_result = n_array**2
+array_duration = time.time() - start_time
+
+print(f"Python List time: {list_duration:.5f} seconds")
+print(f"NumPy Array time: {array_duration:.5f} seconds")
+print(f"NumPy is {list_duration / array_duration:.1f}x faster!")
+
+
