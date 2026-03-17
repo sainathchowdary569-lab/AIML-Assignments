@@ -1,0 +1,23 @@
+import pandas as pd
+
+
+df = pd.read_csv(r"sample-csv-files-sample4.csv")
+
+print("Top 5 Rows of Dataset:")
+print(df.head())
+
+max_values = df.max(numeric_only=True)
+highest_column = max_values.idxmax()
+highest_value = max_values.max()
+
+print("\nColumn with Highest Value:")
+print("Column Name:", highest_column)
+print("Highest Value:", highest_value)
+
+print("\nMissing Values in Each Column:")
+print(df.isnull().sum())
+
+print("\nDataset Shape:", df.shape)
+print("Column Names:", df.columns.tolist())
+print("Data Types:\n", df.dtypes)
+print("Statistical Summary:\n", df.describe())
