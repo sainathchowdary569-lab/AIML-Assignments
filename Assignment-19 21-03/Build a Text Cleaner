@@ -1,0 +1,23 @@
+import re
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+# Sample text
+text = "Hello!!! This is an Example sentence, showing how TEXT cleaning works :)"
+
+# Step 1: Convert to lowercase
+text = text.lower()
+
+# Step 2: Remove punctuation using regex
+text = re.sub(r'[^\w\s]', '', text)
+
+# Step 3: Tokenize (split into words)
+words = text.split()
+
+# Step 4: Remove stopwords using sklearn
+filtered_words = [word for word in words if word not in ENGLISH_STOP_WORDS]
+
+# Final cleaned text
+cleaned_text = " ".join(filtered_words)
+
+print("Original Text:", text)
+print("Cleaned Text:", cleaned_text)

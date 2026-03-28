@@ -1,0 +1,88 @@
+
+''''
+1. Collection of 20 Messy Sentences
+OMG!!! this movie is sooo gud 😂🔥
+I cant beleive u did this!!! 😡
+lol that was funny af 🤣
+Ths is nt wrking prperly
+brb, going to eat 🍔
+idk what u mean bro
+This place is lit 🔥🔥
+im soooo tired rn 😴
+Plz send me d notes asap
+That exam was hardddd 😭
+u r the best ❤️
+Wat is this?? I dont undrstand
+gud mrng have a gr8 day 😊
+This app crashes al the time 😤
+no wayyyy that's awsm 😍
+c u soon 👍
+I hve no idea abt this
+This is tooooo much to handle 😫
+why r u late again??
+sry I forgot the meeting 😅
+
+2. Identification of Issues
+
+The collected sentences contain the following problems:
+
+Slang Words
+OMG → Oh My God
+lol → Laughing Out Loud
+brb → Be Right Back
+idk → I Don’t Know
+rn → Right Now
+asap → As Soon As Possible
+Emojis
+😂 🤣 😡 😴 🔥 ❤️ 😭 😍 👍 😅
+These represent emotions but are not directly understandable by machines.
+Typos (Spelling Errors)
+gud → good
+beleive → believe
+Ths → This
+prperly → properly
+hve → have
+undrstand → understand
+
+3. Preprocessing Techniques Needed
+
+To handle messy text, the following preprocessing steps are required:
+
+1. Lowercasing
+
+Convert all text into lowercase to maintain consistency.
+Example: “OMG” → “omg”
+
+2. Removing Punctuation and Special Characters
+
+Remove symbols like “!!!”, “??”, etc., which do not add meaning.
+
+3. Expanding Slang and Abbreviations
+
+Convert slang into full forms.
+Example: “idk” → “I do not know”
+
+4. Removing or Converting Emojis
+
+Either remove emojis or convert them into meaningful words.
+Example: 😂 → “happy” or “laugh”
+
+5. Spelling Correction
+
+Fix typos using libraries or dictionaries.
+Example: “gud” → “good”
+
+6. Tokenization
+
+Split sentences into individual words or tokens.
+
+7. Stopword Removal
+
+Remove common words like “is”, “the”, “and” that do not add much meaning.
+
+8. Stemming / Lemmatization
+
+Convert words to their base form.
+Example: “running” → “run”
+
+'''

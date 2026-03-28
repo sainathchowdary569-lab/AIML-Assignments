@@ -1,0 +1,18 @@
+'''
+Title: Customer Segmentation using Machine Learning
+Problem Statement
+
+In today’s competitive business environment, understanding customer behavior is very important for increasing sales and improving customer satisfaction. Many businesses struggle to identify different types of customers based on their purchasing patterns. The problem is to analyze customer data and group them into meaningful segments so that businesses can target them effectively.
+Dataset
+
+The dataset used for this project is a Mall Customer Dataset, which contains information about customers such as Customer ID, Gender, Age, Annual Income, and Spending Score. This dataset helps in analyzing customer behavior based on income and spending habits.
+
+Algorithm Used
+
+The main algorithm used in this project is K-Means Clustering. It is an unsupervised machine learning algorithm that groups similar data points into clusters based on their features. The algorithm works by selecting cluster centers, assigning data points to the nearest cluster, and updating the centers iteratively until optimal clusters are formed.
+
+Expected Output
+
+The expected output of this project is the segmentation of customers into different groups such as high-income high-spending customers, low-income low-spending customers, and average customers. The results will be visualized using graphs like scatter plots, where each cluster is represented by a different color. These insights will help businesses design better marketing strategies and improve customer engagement.
+
+'''
